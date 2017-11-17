@@ -15,11 +15,11 @@ def vim():
     if not os.path.exists(os.environ['HOME'] +  '/.vim'):
         os.mkdir(os.environ['HOME'] +  '/.vim')
     # neovim
-    os.system('ln -nsf ~/.dotfiles/config/nvim ~/.config/')
+    os.system('ln -nsf ~/dotfiles/config/nvim ~/.config/')
     # vim
-    os.system('ln -sf ~/.dotfiles/config/nvim/init.vim ~/.vimrc')
-    os.system('ln -sf ~/.dotfiles/config/nvim/options.rc.vim ~/.vim/')
-    os.system('ln -sf ~/.dotfiles/config/nvim/keymap.rc.vim ~/.vim/')
+    os.system('ln -sf ~/dotfiles/config/nvim/init.vim ~/.vimrc')
+    os.system('ln -sf ~/dotfiles/config/nvim/options.rc.vim ~/.vim/')
+    os.system('ln -sf ~/dotfiles/config/nvim/keymap.rc.vim ~/.vim/')
     # Dependency
     # > Jedi
     # $ pip2 install --user --upgrade neovim
@@ -40,10 +40,10 @@ def vim():
 
 def tmux():
     print('>>> tmux')
-    os.system('ln -sf ~/.dotfiles/config/tmux/.tmux.cui.conf ~/.tmux.conf')
-    os.system('cp -rf ~/.dotfiles/config/tmux/.tmux-powerline ~/.tmux-powerline')
-    os.system('ln -sf ~/.dotfiles/config/tmux/default_cui.sh ~/.tmux-powerline/themes/default.sh')
-    os.system('ln -sf ~/.dotfiles/config/tmux/tmux_mem_cpu_load.sh ~/.tmux-powerline/segments/tmux_mem_cpu_load.sh')
+    os.system('ln -sf ~/dotfiles/config/tmux/.tmux.cui.conf ~/.tmux.conf')
+    os.system('cp -rf ~/dotfiles/config/tmux/.tmux-powerline ~/.tmux-powerline')
+    os.system('ln -sf ~/dotfiles/config/tmux/default_cui.sh ~/.tmux-powerline/themes/default.sh')
+    os.system('ln -sf ~/dotfiles/config/tmux/tmux_mem_cpu_load.sh ~/.tmux-powerline/segments/tmux_mem_cpu_load.sh')
     print('<<< [ok] tmux')
 
 # ------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ def tmux():
 
 def git():
     print('>>> git')
-    os.system('ln -sf  ~/.dotfiles/config/git/.gitconfig.cui ~/.gitconfig')
+    os.system('ln -sf  ~/dotfiles/config/git/.gitconfig.cui ~/.gitconfig')
     print('<<< [ok] git')
 
 if '__main__' == __name__:
